@@ -5,6 +5,7 @@
 #include "Primitive.h"
 
 #define MAX_SNAKE 2
+#define MAP_LENGHT 1000
 
 struct PhysBody3D;
 struct PhysMotor3D;
@@ -20,6 +21,8 @@ public:
 	bool CleanUp();
 
 	void OnCollision(PhysBody3D* body1, PhysBody3D* body2);
+	void CreateBox(int degrees, vec3 angle, vec3 offset, vec3 size, Color color);
+	void RenderBox(int degrees, vec3 angle, vec3 offset, vec3 size, Color color);
 
 public:
 	/*
@@ -29,6 +32,7 @@ public:
 	PhysBody3D* pb_snake2[MAX_SNAKE];
 	Sphere s_snake2[MAX_SNAKE];
 	*/
+	p2DynArray<Cube> listcubes;
 
 	PhysBody3D* pb_chassis;
 	Cube p_chassis;
