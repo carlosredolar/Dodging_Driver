@@ -24,21 +24,41 @@ bool ModuleSceneIntro::Start()
 	//MAP LIMITS
 
 	//right wall
-	CreateBox(0, { 0, 1, 0 }, { -20, 1, MAP_LENGHT/2 }, { 1,50,MAP_LENGHT +20}, White);
+	CreateBox(0, { 0, 1, 0 }, { -20, 1, MAP_LENGHT/2 }, { 1,50,MAP_LENGHT +20}, Sky);
 	//left wall
-	CreateBox(0, { 0, 1, 0 }, { 20, 1, MAP_LENGHT/2 }, { 1,50,MAP_LENGHT +20}, White);
+	CreateBox(0, { 0, 1, 0 }, { 20, 1, MAP_LENGHT/2 }, { 1,50,MAP_LENGHT +20}, Sky);
 	//floor wall
-	CreateBox(0, { 0, 1, 0 }, { 0, 1, MAP_LENGHT / 2 }, { 40,1,MAP_LENGHT +20}, White);
+	CreateBox(0, { 0, 1, 0 }, { 0, 1, MAP_LENGHT / 2 }, { 40,1,MAP_LENGHT +20}, Grass);
 	//back start wall
-	CreateBox(0, { 0, 1, 0 }, { 0, 1, -10}, { 40,50,1 }, White);
+	CreateBox(0, { 0, 1, 0 }, { 0, 1, -10}, { 40,50,1 }, Sky);
 	//end wall
 	CreateBox(0, { 0, 1, 0 }, { 0, 1, MAP_LENGHT }, { 40,50,1 }, Green);
 	//.......................................................................
 
 	//MAP OBSTACLES
 
-	//ramp
-	CreateBox(-10, { 1, 0, 0 }, { 0, 1, 100 }, { 40,1,20 }, Purple);
+	//ramps
+	CreateBox(-10, { 1, 0, 0 }, { 0, 1, 100 }, { 40,1,20 }, Gray);
+	CreateBox(-30, { 1, 0, 0 }, { 0, 1, 950 }, { 40,1,20 }, Gray);
+	//trees
+	for (float i = 0; i < 8; i++)
+	{
+		float distance = i * 100;
+		CreateBox(0, { 0, 1, 0 }, { 10, 3, distance }, { 1,10,1 }, Brown);
+
+		CreateBox(0, { 0, 1, 0 }, { -5, 3, distance +20 }, { 1,10,1 }, Brown);
+
+		CreateBox(0, { 0, 1, 0 }, { -5, 3, distance +70 }, { 1,10,1 }, Brown);
+
+		CreateBox(0, { 0, 1, 0 }, { 5, 3, distance +120 }, { 1,10,1 }, Brown);
+
+		CreateBox(0, { 0, 1, 0 }, { -15, 3, distance +110 }, { 1,10,1 }, Brown);
+
+		CreateBox(0, { 0, 1, 0 }, { 15, 3, distance + 140 }, { 1,10,1 }, Brown);
+
+		CreateBox(0, { 0, 1, 0 }, { 0, 3, distance + 160 }, { 1,10,1 }, Brown);
+	}
+
 
 
 	return ret;
@@ -55,28 +75,57 @@ bool ModuleSceneIntro::CleanUp()
 // Update
 update_status ModuleSceneIntro::Update(float dt)
 {
-	Plane p(0, 1, 0, 0);
-	p.axis = true;
-	p.Render();
+	//Plane p(0, 1, 0, 0);
+	//p.axis = true;
+	//p.Render();
 
 	//MAP LIMITS
 
 	//right wall
-	RenderBox(0, { 0, 1, 0 }, { -20, 1, MAP_LENGHT / 2 }, { 1,50,MAP_LENGHT +20}, White);
+	RenderBox(0, { 0, 1, 0 }, { -20, 1, MAP_LENGHT / 2 }, { 1,50,MAP_LENGHT +20}, Sky);
 	//left wall
-	RenderBox(0, { 0, 1, 0 }, { 20, 1, MAP_LENGHT / 2 }, { 1,50,MAP_LENGHT +20}, White);
+	RenderBox(0, { 0, 1, 0 }, { 20, 1, MAP_LENGHT / 2 }, { 1,50,MAP_LENGHT +20}, Sky);
 	//floor wall
-	RenderBox(0, { 0, 1, 0 }, { 0, 1, MAP_LENGHT / 2 }, { 40,1,MAP_LENGHT +20}, White);
+	RenderBox(0, { 0, 1, 0 }, { 0, 1, MAP_LENGHT / 2 }, { 40,1,MAP_LENGHT +20}, Grass);
 	//back start wall
-	RenderBox(0, { 0, 1, 0 }, { 0, 1, -10}, { 40,50,1 }, White);
+	RenderBox(0, { 0, 1, 0 }, { 0, 1, -10}, { 40,50,1 }, Sky);
 	//end wall
 	RenderBox(0, { 0, 1, 0 }, { 0, 1, MAP_LENGHT }, { 40,50,1 }, Green);
 	//.......................................................................
 
 	//MAP OBSTACLES
 
-	//ramp
-	RenderBox(-10, { 1, 0, 0 }, { 0, 1, 100 }, { 40,1,20 }, Purple);
+	//ramps
+	RenderBox(-10, { 1, 0, 0 }, { 0, 1, 100 }, { 40,1,20 }, Gray);
+	RenderBox(-30, { 1, 0, 0 }, { 0, 1, 950 }, { 40,1,20 }, Gray);
+	//trees
+	for (float i = 0; i < 8; i++)
+	{
+		float distance = i * 100;
+		RenderBox(0, { 0, 1, 0 }, { 10, 3, distance }, { 1,10,1 }, Brown);
+		RenderBox(0, { 0, 1, 0 }, { 10, 9, distance }, { 6,6,6 }, Deep_Green);
+
+		RenderBox(0, { 0, 1, 0 }, { -5, 3, distance + 20 }, { 1,10,1 }, Brown);
+		RenderBox(0, { 0, 1, 0 }, { -5, 9, distance + 20 }, { 6,6,6 }, Deep_Green);
+
+		RenderBox(0, { 0, 1, 0 }, { -5, 3, distance + 70 }, { 1,10,1 }, Brown);
+		RenderBox(0, { 0, 1, 0 }, { -5, 9, distance + 70 }, { 6,6,6 }, Deep_Green);
+
+		RenderBox(0, { 0, 1, 0 }, { 5, 3, distance + 120 }, { 1,10,1 }, Brown);
+		RenderBox(0, { 0, 1, 0 }, { 5, 9, distance + 120 }, { 6,6,6 }, Deep_Green);
+
+		RenderBox(0, { 0, 1, 0 }, { -15, 3, distance + 110 }, { 1,10,1 }, Brown);
+		RenderBox(0, { 0, 1, 0 }, { -15, 9, distance + 110 }, { 6,6,6 }, Deep_Green);
+
+		RenderBox(0, { 0, 1, 0 }, { 15, 3, distance + 140 }, { 1,10,1 }, Brown);
+		RenderBox(0, { 0, 1, 0 }, { 15, 9, distance + 140 }, { 6,6,6 }, Deep_Green);
+
+		RenderBox(0, { 0, 1, 0 }, { 0, 3, distance + 160 }, { 1,10,1 }, Brown);
+		RenderBox(0, { 0, 1, 0 }, { 0, 9, distance + 160 }, { 6,6,6 }, Deep_Green);
+	}
+	
+
+
 
 
 	return UPDATE_CONTINUE;

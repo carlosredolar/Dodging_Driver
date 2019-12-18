@@ -28,9 +28,11 @@ struct Color
 extern Color Red;
 extern Color Green;
 extern Color Deep_Green;
+extern Color Grass;
 extern Color Blue;
+extern Color Sky;
 extern Color Black;
 extern Color White;
 extern Color Purple;
-extern Color Grey;
+extern Color Gray;
 extern Color Brown;
