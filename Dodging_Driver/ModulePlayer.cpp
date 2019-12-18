@@ -21,8 +21,16 @@ bool ModulePlayer::Start()
 	VehicleInfo car;
 
 	// Car properties ----------------------------------------
-	car.chassis_size.Set(2, 2,4);
-	car.chassis_offset.Set(0, 1.5, 0);
+	car.chassis_size.Set(4, 1.5, 7);
+	car.chassis_offset.Set(0, 1, 0);
+	car.leftstick_size.Set(0.25, 0.8, 0.5);
+	car.leftstick_offset.Set(1, 2, -3);
+	car.rightstick_size.Set(0.25, 0.8, 0.5);
+	car.rightstick_offset.Set(-1, 2, -3);
+	car.roof_size.Set(3.5, 1.5, 3.5);
+	car.roof_offset.Set(0, 2, -0.5);
+	car.aileron_size.Set(5, 0.25, 1);
+	car.aileron_offset.Set(0, 2.35, -3);
 	car.mass = 500.0f;
 	car.suspensionStiffness = 15.88f;
 	car.suspensionCompression = 0.83f;
@@ -34,7 +42,7 @@ bool ModulePlayer::Start()
 	// Wheel properties ---------------------------------------
 	float connection_height = 1.2f;
 	float wheel_radius = 0.6f;
-	float wheel_width = 0.5f;
+	float wheel_width = 0.7f;
 	float suspensionRestLength = 1.2f;
 
 	// Don't change anything below this line ------------------

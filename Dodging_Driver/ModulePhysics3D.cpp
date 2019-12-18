@@ -288,6 +288,44 @@ PhysVehicle3D* ModulePhysics3D::AddVehicle(const VehicleInfo& info)
 
 	comShape->addChildShape(trans, colShape);
 
+
+	//roof
+	btCollisionShape* colroof = new btBoxShape(btVector3(info.roof_size.x*0.5f, info.roof_size.y*0.5f, info.roof_size.z*0.5f));
+	shapes.add(colroof);
+	btTransform transroof;
+	transroof.setIdentity();
+	transroof.setOrigin(btVector3(info.roof_offset.x, info.roof_offset.y, info.roof_offset.z));
+	comShape->addChildShape(transroof, colroof);
+
+
+	//left stick
+	btCollisionShape* colleftstick = new btBoxShape(btVector3(info.leftstick_size.x*0.5f, info.leftstick_size.y*0.5f, info.leftstick_size.z*0.5f));
+	shapes.add(colleftstick);
+	btTransform transleftstick;
+	transleftstick.setIdentity();
+	transleftstick.setOrigin(btVector3(info.leftstick_offset.x, info.leftstick_offset.y, info.leftstick_offset.z));
+	comShape->addChildShape(transleftstick, colleftstick);
+
+
+	//right stick
+	btCollisionShape* colrightstick = new btBoxShape(btVector3(info.rightstick_size.x*0.5f, info.rightstick_size.y*0.5f, info.rightstick_size.z*0.5f));
+	shapes.add(colrightstick);
+	btTransform transrightstick;
+	transrightstick.setIdentity();
+	transrightstick.setOrigin(btVector3(info.rightstick_offset.x, info.rightstick_offset.y, info.rightstick_offset.z));
+	comShape->addChildShape(transrightstick, colrightstick);
+
+
+	//aileron
+	btCollisionShape* colaileron = new btBoxShape(btVector3(info.aileron_size.x*0.5f, info.aileron_size.y*0.5f, info.aileron_size.z*0.5f));
+	shapes.add(colaileron);
+	btTransform transaileron;
+	transaileron.setIdentity();
+	transaileron.setOrigin(btVector3(info.aileron_offset.x, info.aileron_offset.y, info.aileron_offset.z));
+	comShape->addChildShape(transaileron, colaileron);
+
+
+
 	btTransform startTransform;
 	startTransform.setIdentity();
 
