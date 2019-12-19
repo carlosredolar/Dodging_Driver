@@ -24,15 +24,15 @@ bool ModuleSceneIntro::Start()
 	//MAP LIMITS
 
 	//right wall
-	CreateBox(0, { 0, 1, 0 }, { -20, 1, MAP_LENGHT/2 }, { 1,50,MAP_LENGHT +20}, Sky);
+	CreateBox(0, { 0, 1, 0 }, { -20, 1, MAP_LENGHT/2 }, { 1,80,MAP_LENGHT +20}, Sky);
 	//left wall
-	CreateBox(0, { 0, 1, 0 }, { 20, 1, MAP_LENGHT/2 }, { 1,50,MAP_LENGHT +20}, Sky);
+	CreateBox(0, { 0, 1, 0 }, { 20, 1, MAP_LENGHT/2 }, { 1,80,MAP_LENGHT +20}, Sky);
 	//floor wall
 	CreateBox(0, { 0, 1, 0 }, { 0, 1, MAP_LENGHT / 2 }, { 40,1,MAP_LENGHT +20}, Grass);
 	//back start wall
-	CreateBox(0, { 0, 1, 0 }, { 0, 1, -10}, { 40,50,1 }, Sky);
+	CreateBox(0, { 0, 1, 0 }, { 0, 1, -10}, { 40,80,1 }, Sky);
 	//end wall
-	CreateBox(0, { 0, 1, 0 }, { 0, 1, MAP_LENGHT }, { 40,50,1 }, Green);
+	CreateBox(0, { 0, 1, 0 }, { 0, 1, MAP_LENGHT }, { 40,80,1 }, Green);
 	//.......................................................................
 
 	//MAP OBSTACLES
@@ -82,15 +82,15 @@ update_status ModuleSceneIntro::Update(float dt)
 	//MAP LIMITS
 
 	//right wall
-	RenderBox(0, { 0, 1, 0 }, { -20, 1, MAP_LENGHT / 2 }, { 1,50,MAP_LENGHT +20}, Sky);
+	RenderBox(0, { 0, 1, 0 }, { -20, 1, MAP_LENGHT / 2 }, { 1,80,MAP_LENGHT +20}, Sky);
 	//left wall
-	RenderBox(0, { 0, 1, 0 }, { 20, 1, MAP_LENGHT / 2 }, { 1,50,MAP_LENGHT +20}, Sky);
+	RenderBox(0, { 0, 1, 0 }, { 20, 1, MAP_LENGHT / 2 }, { 1,80,MAP_LENGHT +20}, Sky);
 	//floor wall
 	RenderBox(0, { 0, 1, 0 }, { 0, 1, MAP_LENGHT / 2 }, { 40,1,MAP_LENGHT +20}, Grass);
 	//back start wall
-	RenderBox(0, { 0, 1, 0 }, { 0, 1, -10}, { 40,50,1 }, Sky);
+	RenderBox(0, { 0, 1, 0 }, { 0, 1, -10}, { 40,80,1 }, Sky);
 	//end wall
-	RenderBox(0, { 0, 1, 0 }, { 0, 1, MAP_LENGHT }, { 40,50,1 }, Green);
+	RenderBox(0, { 0, 1, 0 }, { 0, 1, MAP_LENGHT }, { 40,80,1 }, Green);
 	//.......................................................................
 
 	//MAP OBSTACLES
