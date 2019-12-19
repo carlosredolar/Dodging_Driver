@@ -12,6 +12,8 @@ Drive dodging trees and citizens and arrive on time at your destination.
 
 ### Debug
 * F1 - Show meshes
+* RIGHT CLICK + WASD - Move the camera
+* RIGHT CLICK + SHIFT + WASD - Move the camera faster
  
 ## Team
 Carlos Redolar Torres - https://github.com/carlosredolar
