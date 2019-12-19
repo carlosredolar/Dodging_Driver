@@ -153,8 +153,8 @@ update_status ModulePlayer::Update(float dt)
 
 	vehicle->Render();
 
-	char title[80];
-	sprintf_s(title, "%.1f Km/h", vehicle->GetKmh());
+	char title[150];
+	sprintf_s(title, "TIENES %i s PARA LLEGAR A LA META. CORRE Y ESQUIVA LO MEJOR QUE PUEDAS, TU CITA DE TINDER TE ESPERA!", (TIME_TRIAL-SDL_GetTicks())/1000);
 	App->window->SetTitle(title);
 
 	return UPDATE_CONTINUE;
