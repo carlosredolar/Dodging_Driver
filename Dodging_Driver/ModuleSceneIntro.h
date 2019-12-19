@@ -6,7 +6,7 @@
 
 #define MAX_SNAKE 2
 #define MAP_LENGHT 1000
-#define TIME_TRIAL 10*1000
+#define TIME_TRIAL 50*1000
 
 struct PhysBody3D;
 struct PhysMotor3D;

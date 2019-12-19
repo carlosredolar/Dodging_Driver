@@ -85,6 +85,20 @@ bool ModuleSceneIntro::Start()
 	CreateBox(0, { 0, 0, 1 }, { -8, 7.5, 700 }, { 4,1,1 }, Black);
 
 
+	//WIN letters
+	//W
+	CreateBox(-20, { 0, 0, 1 }, { 15, 20, MAP_LENGHT - 3 }, { 1,10,1 }, Black);
+	CreateBox(20, { 0, 0, 1 }, { 5, 20, MAP_LENGHT - 3 }, { 1,10,1 }, Black);
+	CreateBox(-30, { 0, 0, 1 }, { 8.5, 18, MAP_LENGHT - 3 }, { 1,6,1 }, Black);
+	CreateBox(30, { 0, 0, 1 }, { 11.5, 18, MAP_LENGHT - 3 }, { 1,6,1 }, Black);
+	//I
+	CreateBox(0, { 0, 0, 1 }, { 0, 20, MAP_LENGHT - 3 }, { 1,9,1 }, Black);
+	//N
+	CreateBox(0, { 0, 0, 1 }, { -7, 20, MAP_LENGHT - 3 }, { 1,9,1 }, Black);
+	CreateBox(0, { 0, 0, 1 }, { -13, 20, MAP_LENGHT - 3 }, { 1,9,1 }, Black);
+	CreateBox(-30, { 0, 0, 1 }, { -10, 20, MAP_LENGHT - 3 }, { 1,10,1 }, Black);
+
+
 	return ret;
 }
 
@@ -171,6 +185,19 @@ update_status ModuleSceneIntro::Update(float dt)
 	RenderBox(0, { 0, 0, 1 }, { -8, 7, 700 }, { 1,5,1 }, Black);
 	RenderBox(0, { 0, 0, 1 }, { -8, 9.5, 700 }, { 2,2,2 }, Black);
 	RenderBox(0, { 0, 0, 1 }, { -8, 7.5, 700 }, { 4,1,1 }, Black);
+
+	//WIN letters
+	//W
+	RenderBox(-20, { 0, 0, 1 }, { 15, 20, MAP_LENGHT-3 }, { 1,10,1 }, Black);
+	RenderBox(20, { 0, 0, 1 }, { 5, 20, MAP_LENGHT - 3 }, { 1,10,1 }, Black);
+	RenderBox(-30, { 0, 0, 1 }, { 8.5, 18, MAP_LENGHT - 3 }, { 1,6,1 }, Black);
+	RenderBox(30, { 0, 0, 1 }, { 11.5, 18, MAP_LENGHT - 3 }, { 1,6,1 }, Black);
+	//I
+	RenderBox(0, { 0, 0, 1 }, { 0, 20, MAP_LENGHT - 3 }, { 1,9,1 }, Black);
+	//N
+	RenderBox(0, { 0, 0, 1 }, { -7, 20, MAP_LENGHT - 3 }, { 1,9,1 }, Black);
+	RenderBox(0, { 0, 0, 1 }, { -13, 20, MAP_LENGHT - 3 }, { 1,9,1 }, Black);
+	RenderBox(-30, { 0, 0, 1 }, { -10, 20, MAP_LENGHT - 3 }, { 1,10,1 }, Black);
 
 
 	if (SDL_GetTicks() >= TIME_TRIAL)
