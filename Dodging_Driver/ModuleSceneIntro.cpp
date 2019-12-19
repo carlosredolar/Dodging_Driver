@@ -179,6 +179,7 @@ update_status ModuleSceneIntro::Update(float dt)
 
 void ModuleSceneIntro::OnCollision(PhysBody3D* body1, PhysBody3D* body2)
 {
+
 }
 
 void ModuleSceneIntro::CreateBox(int degrees, vec3 angle, vec3 offset, vec3 size, Color color) {
