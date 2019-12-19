@@ -4,6 +4,7 @@
 #include "Primitive.h"
 #include "PhysBody3D.h"
 
+
 ModuleSceneIntro::ModuleSceneIntro(Application* app, bool start_enabled) : Module(app, start_enabled)
 {
 }
@@ -172,7 +173,10 @@ update_status ModuleSceneIntro::Update(float dt)
 	RenderBox(0, { 0, 0, 1 }, { -8, 7.5, 700 }, { 4,1,1 }, Black);
 
 
-
+	if (SDL_GetTicks() >= TIME_TRIAL)
+	{
+		return UPDATE_STOP;
+	}
 
 	return UPDATE_CONTINUE;
 }
